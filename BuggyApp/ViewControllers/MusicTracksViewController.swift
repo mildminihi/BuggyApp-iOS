@@ -27,6 +27,7 @@ class MusicTracksViewController: UIViewController {
       switch result {
       case .success(let tracks):
         self?.tracks = tracks
+        self?.tableView.reloadData()
       case .failure(let error):
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         let dismissAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -47,7 +48,7 @@ class MusicTracksViewController: UIViewController {
 
 extension MusicTracksViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return tracks.isEmpty ? 0 : 10
+    return tracks.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,6 +56,9 @@ extension MusicTracksViewController: UITableViewDataSource {
       return UITableViewCell()
     }
     let track: Track = tracks[indexPath.item]
+    cell.artistLabel.text = track.artistName
+    cell.trackLabel.text = track.trackName
+    cell.priceLabel.text = "\(track.trackPrice)"
     cell.configCell(track: track)
     return cell
   }
@@ -66,6 +70,7 @@ extension MusicTracksViewController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    self.performSegue(withIdentifier: "showDetail", sender: self.tracks[indexPath.row])
     tableView.deselectRow(at: indexPath, animated: true)
   }
 }
