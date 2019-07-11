@@ -12,6 +12,9 @@ class MusicTracksViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
   var tracks: [Track] = [] {
     didSet {
       tableView.reloadData()
@@ -23,11 +26,14 @@ class MusicTracksViewController: UIViewController {
     // Do any additional setup after loading the view.
     tableView.estimatedRowHeight = CGFloat(140.0)
     
+    self.activityIndicator.startAnimating()
+    
     APIManager.shared.getArtistInfo(artistName: "taylorswift") { [weak self] result in
       switch result {
       case .success(let tracks):
         self?.tracks = tracks
         self?.tableView.reloadData()
+        self?.activityIndicator.stopAnimating()
       case .failure(let error):
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         let dismissAction = UIAlertAction(title: "OK", style: .default, handler: nil)

@@ -88,18 +88,25 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="da3-bz-R5l"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YMY-AI-7QD">
+                                <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YMY-AI-7QD" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="4VA-hQ-iI5"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="jxy-YT-Xsr" secondAttribute="bottom" id="5xs-eB-f57"/>
                             <constraint firstItem="jxy-YT-Xsr" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="RFS-Rh-Fwm"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="jxy-YT-Xsr" secondAttribute="trailing" id="TEd-yb-OIh"/>
+                            <constraint firstItem="YMY-AI-7QD" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="bRd-4D-DAW"/>
                             <constraint firstItem="jxy-YT-Xsr" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="sqd-5M-7qb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Taylor Swift" id="KBZ-lf-RA3"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="YMY-AI-7QD" id="u3d-Fu-m0z"/>
                         <outlet property="tableView" destination="jxy-YT-Xsr" id="eIn-5C-mWv"/>
                         <segue destination="cUH-eN-7PC" kind="show" identifier="showDetail" id="uJn-o4-xRd"/>
                     </connections>
