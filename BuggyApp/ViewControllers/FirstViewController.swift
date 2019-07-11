@@ -18,6 +18,7 @@ class FirstViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     getCountries()
+    initTabBarItem()
   }
   
   func getCountries() {
@@ -32,7 +33,20 @@ class FirstViewController: UIViewController {
       }
     }
   }
+    func initTabBarItem() {
+        self.tabBarController?.tabBar.items?[0].image = UIImage(named: "icons8-earth_planet")
+        self.tabBarController?.tabBar.items?[0].title = "Country List"
+        self.tabBarController?.tabBar.items?[0].selectedImage = UIImage(named: "icons8-earth_planet")
+        self.tabBarController?.tabBar.items?[1].image = UIImage(named: "icons8-musical_notes_filled")
+        self.tabBarController?.tabBar.items?[1].selectedImage = UIImage(named: "icons8-musical_notes_filled")
+        self.tabBarController?.tabBar.items?[1].title = "Songs"
+        self.tabBarController?.tabBar.items?[2].image = UIImage(named: "icons8-contact_card_filled")
+        self.tabBarController?.tabBar.items?[2].selectedImage = UIImage(named: "icons8-contact_card_filled")
+        self.tabBarController?.tabBar.items?[2].title = "Profile"
+    }
 }
+
+
 
 extension FirstViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
