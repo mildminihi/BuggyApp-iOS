@@ -13,7 +13,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,7 +52,7 @@
         <scene sceneID="Cdk-5s-HaD">
             <objects>
                 <viewControllerPlaceholder storyboardName="First" id="Oy6-V8-D89" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Country List" image="icons8-earth_planet" selectedImage="icons8-earth_planet" id="mbH-u7-1xK"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Country List" image="icons8-earth_planet" selectedImage="icons8-earth_planet" springLoaded="YES" id="mbH-u7-1xK"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJ7-ri-m6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
