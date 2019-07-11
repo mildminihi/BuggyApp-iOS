@@ -10,21 +10,90 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="7Fw-5b-tL2">
             <objects>
-                <viewController id="6uy-RW-zmC" sceneMemberID="viewController">
+                <viewController id="6uy-RW-zmC" customClass="ThirdViewController" customModule="BuggyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ft-Gu-ggK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your name (nickname)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCC-qA-IIa">
+                                <rect key="frame" x="72" y="437.5" width="270" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="John Appleseed(John)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdF-cU-G0b">
+                                <rect key="frame" x="72" y="487" width="270" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="returnPress:" destination="6uy-RW-zmC" eventType="primaryActionTriggered" id="TLm-VO-IPE"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xCC-qA-IIa" firstAttribute="centerX" secondItem="6ft-Gu-ggK" secondAttribute="centerX" id="285-yt-0MZ"/>
+                            <constraint firstItem="xCC-qA-IIa" firstAttribute="centerY" secondItem="6ft-Gu-ggK" secondAttribute="centerY" id="8fC-mg-9Ia"/>
+                            <constraint firstItem="fdF-cU-G0b" firstAttribute="top" secondItem="xCC-qA-IIa" secondAttribute="bottom" constant="28.5" id="dWk-Vk-KmX"/>
+                            <constraint firstItem="fdF-cU-G0b" firstAttribute="leading" secondItem="xCC-qA-IIa" secondAttribute="leading" id="pFH-0I-kvm"/>
+                            <constraint firstItem="fdF-cU-G0b" firstAttribute="trailing" secondItem="xCC-qA-IIa" secondAttribute="trailing" id="z4B-fC-dWv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="J4c-v2-bSr"/>
                     </view>
                     <navigationItem key="navigationItem" id="G7N-dU-juY"/>
+                    <connections>
+                        <outlet property="inputTextField" destination="fdF-cU-G0b" id="Vp9-5g-pXJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F34-4h-Wlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1657.9710144927537" y="1019.8660714285713"/>
+        </scene>
+        <!--Name Detail View Controller-->
+        <scene sceneID="gKC-U2-BiL">
+            <objects>
+                <viewController storyboardIdentifier="detail_name" id="Gtv-za-SrL" customClass="NameDetailViewController" customModule="BuggyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kw4-hl-1Wz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yx-cn-2kD">
+                                <rect key="frame" x="176" y="437.5" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4J-7a-qb5">
+                                <rect key="frame" x="88" y="482" width="238" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="rL8-ZQ-INb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7yx-cn-2kD" firstAttribute="centerX" secondItem="Kw4-hl-1Wz" secondAttribute="centerX" id="Ak7-zF-taT"/>
+                            <constraint firstItem="Z4J-7a-qb5" firstAttribute="top" secondItem="7yx-cn-2kD" secondAttribute="bottom" constant="23.5" id="NUk-uS-y22"/>
+                            <constraint firstItem="Z4J-7a-qb5" firstAttribute="leading" secondItem="1oq-IC-bLz" secondAttribute="leading" constant="88" id="OgJ-1q-djz"/>
+                            <constraint firstItem="7yx-cn-2kD" firstAttribute="centerY" secondItem="Kw4-hl-1Wz" secondAttribute="centerY" id="W4S-za-9eP"/>
+                            <constraint firstItem="1oq-IC-bLz" firstAttribute="trailing" secondItem="Z4J-7a-qb5" secondAttribute="trailing" constant="88" id="bPh-FC-l3a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1oq-IC-bLz"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Z4J-7a-qb5" id="Lvz-TD-SMu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="46U-gp-FHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2475.36231884058" y="1019.8660714285713"/>
         </scene>
         <!--Third-->
         <scene sceneID="oyB-S5-CR8">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -32,7 +32,7 @@
         <scene sceneID="Zcd-t9-gYb">
             <objects>
                 <viewControllerPlaceholder storyboardName="Third" id="Qia-C7-sgH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Third" image="first" id="HIy-Ob-F6a"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="icons8-contact_card_filled" id="HIy-Ob-F6a"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJ9-8a-bCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,7 +42,7 @@
         <scene sceneID="Qmw-2B-qkN">
             <objects>
                 <viewControllerPlaceholder storyboardName="Second" id="5V8-Px-l75" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" id="cWO-fd-J5k"/>
+                    <tabBarItem key="tabBarItem" title="Songs" image="icons8-musical_notes_filled" id="cWO-fd-J5k"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAo-xR-yaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,7 +52,7 @@
         <scene sceneID="Cdk-5s-HaD">
             <objects>
                 <viewControllerPlaceholder storyboardName="First" id="Oy6-V8-D89" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" id="mbH-u7-1xK"/>
+                    <tabBarItem key="tabBarItem" title="Country List" image="icons8-earth_planet" selectedImage="icons8-earth_planet" id="mbH-u7-1xK"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJ7-ri-m6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,6 +60,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="icons8-contact_card_filled" width="25" height="25"/>
+        <image name="icons8-earth_planet" width="25" height="25"/>
+        <image name="icons8-musical_notes_filled" width="25" height="25"/>
     </resources>
 </document>
